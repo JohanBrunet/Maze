@@ -1,6 +1,8 @@
 package maze;
 
-public class Cell {
+import graph.Vertex;
+
+public class Cell extends Vertex {
 	private CellType type;
 	private int x;
 	private int y;
@@ -33,5 +35,15 @@ public class Cell {
 
 	public void setType(CellType type) {
 		this.type = type;
+	}
+	
+	public String toString() {
+		switch(this.type) {
+		case A : return "A";
+		case D : return "D";
+		case E : return "E";
+		case W : return "W";
+		default : return "W";
+		}
 	}
 }
