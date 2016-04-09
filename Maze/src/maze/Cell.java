@@ -41,9 +41,9 @@ public class Cell extends Vertex {
 		switch(this.type) {
 		case A : return "A";
 		case D : return "D";
-		case E : return "E";
-		case W : return "W";
-		default : return "W";
+		case E : return ".";
+		case W : return "|";
+		default : return "|";
 		}
 	}
 }
