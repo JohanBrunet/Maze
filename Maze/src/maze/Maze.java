@@ -55,17 +55,21 @@ public class Maze extends GraphImp {
 	public void setWalkableCells(Cell[] walkableCells) {
 		int i;
 		for (i = 0; i < cells.length; i++) {
-			this.cells[walkableCells[i].getX()][walkableCells[i].getY()] = walkableCells[i];
+			this.cells[walkableCells[i].getX()-1][walkableCells[i].getY()-1] = walkableCells[i];
 		}
 	}
 	
 	public String toString() {
 		int i, j;
+		String maze = "";
 		for (i = 0; i < cells.length; i++) {
 			for (j = 0; j < cells.length; j++) {
-				System.out.println(this.cells[i][j].toString());
+				maze += this.cells[i][j].toString();
+				maze += " ";
 			}
+			maze += "\n";
 		}
+		System.out.println(maze);
 		return null;
 	}
 }
