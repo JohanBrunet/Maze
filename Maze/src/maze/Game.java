@@ -4,7 +4,8 @@ import graph.Edge;
 import graph.Vertex;
 
 public class Game {
-
+	private static Cell[] walkableCells;
+	
 	public static void main(String[] args) {
 		Cell departure = new Cell(0, 0, CellType.D, false);
 		Cell arrival = new Cell(2, 2, CellType.A, false);
@@ -18,7 +19,7 @@ public class Game {
 	}
 	
 	public static Cell[] createWalkableCells() {
-		Cell[] walkableCells = new Cell[6];
+		walkableCells = new Cell[6];
 		walkableCells[0] = new Cell(0, 1, CellType.E, false);
 		walkableCells[1] = new Cell(0, 2, CellType.E, false);
 		walkableCells[2] = new Cell(1, 0, CellType.E, false);
@@ -30,6 +31,10 @@ public class Game {
 	
 	public static Edge[] setEdges() {
 		//TODO implement method to set the edges between walkable cells
+		int i;
+		for (i = 0; i < walkableCells.length; i++) {
+			
+		}
 		return null;
 	}
 }
