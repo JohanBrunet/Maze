@@ -9,7 +9,6 @@ public class Game {
 		walkableCells[0] = new Cell(2,2, CellType.E);
 		walkableCells[1] = new Cell(3,2, CellType.E);
 		Maze maze = new Maze(3, 3, departure, arrival);
-		maze.toString();
 		maze.setWalkableCells(walkableCells);
 		maze.toString();
 	}

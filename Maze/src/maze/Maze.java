@@ -54,7 +54,7 @@ public class Maze extends GraphImp {
 	
 	public void setWalkableCells(Cell[] walkableCells) {
 		int i;
-		for (i = 0; i < cells.length; i++) {
+		for (i = 0; i < walkableCells.length; i++) {
 			this.cells[walkableCells[i].getX()-1][walkableCells[i].getY()-1] = walkableCells[i];
 		}
 	}
