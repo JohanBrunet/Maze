@@ -37,6 +37,11 @@ public class Cell extends Vertex {
 		this.type = type;
 	}
 	
+	public String displayCoord() {
+		String coord = "(" + this.x + "," + this.y + ")";
+		return coord;
+	}
+	
 	public String toString() {
 		switch(this.type) {
 		case A : return "A";

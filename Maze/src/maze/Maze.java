@@ -9,14 +9,11 @@ public class Maze extends GraphImp {
 	private Cell departure;
 	private Cell arrival;
 	
-	public Maze(int height, int width, Cell departure, Cell arrival) {
+	public Maze(int height, int width) {
 		super(height*width, height*width*4, false);
 		this.height = height;
 		this.width = width;
-		this.departure = departure;
-		this.arrival = arrival;
 		this.cells = new Cell[height][width];
-		initMaze(departure, arrival);
 	}
 
 	public int getWidth() {
@@ -34,8 +31,24 @@ public class Maze extends GraphImp {
 	public void setHeight(int height) {
 		this.height = height;
 	}
+
+	public Cell getDeparture() {
+		return departure;
+	}
+
+	public void setDeparture(Cell departure) {
+		this.departure = departure;
+	}
+
+	public Cell getArrival() {
+		return arrival;
+	}
+
+	public void setArrival(Cell arrival) {
+		this.arrival = arrival;
+	}
 	
-	private void initMaze(Cell departure, Cell arrival) {
+	public void initMaze(Cell departure, Cell arrival) {
 		int i, j;
 		for (i = 0; i < cells.length; i++) {
 			for (j = 0; j < cells.length; j++) {

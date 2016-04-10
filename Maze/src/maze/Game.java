@@ -1,11 +1,14 @@
 package maze;
 
+import graph.Vertex;
+
 public class Game {
 
 	public static void main(String[] args) {
 		Cell departure = new Cell(0, 0, CellType.D);
 		Cell arrival = new Cell(2, 2, CellType.A);
-		Maze maze = new Maze(3, 3, departure, arrival);
+		Maze maze = new Maze(3, 3);
+		maze.initMaze(departure, arrival);
 		Cell[] walkableCells = new Cell[6];
 		walkableCells[0] = new Cell(0, 1, CellType.E);
 		walkableCells[1] = new Cell(0, 2, CellType.E);
@@ -15,5 +18,10 @@ public class Game {
 		walkableCells[5] = new Cell(2, 1, CellType.E);
 		maze.setWalkableCells(walkableCells);
 		maze.toString();
+		System.out.println("Departure : " + departure.displayCoord());
+		System.out.println("Arrival : " + arrival.displayCoord());
+		//Vertex[] neighbors = maze.getNeighboors(arrival);
+		//for (Vertex v : neighbors) {	
+		//}
 	}
 }
