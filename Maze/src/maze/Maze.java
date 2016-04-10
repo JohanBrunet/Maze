@@ -39,10 +39,10 @@ public class Maze extends GraphImp {
 		int i, j;
 		for (i = 0; i < cells.length; i++) {
 			for (j = 0; j < cells.length; j++) {
-				if (departure.getX()-1 == i && departure.getY()-1 == j) {
+				if (departure.getX() == i && departure.getY() == j) {
 					this.cells[i][j] = new Cell(i, j, CellType.D);
 				}
-				else if (arrival.getX()-1 == i && arrival.getY()-1 == j) {
+				else if (arrival.getX() == i && arrival.getY() == j) {
 					this.cells[i][j] = new Cell(i, j, CellType.A);
 				}
 				else {
@@ -55,7 +55,7 @@ public class Maze extends GraphImp {
 	public void setWalkableCells(Cell[] walkableCells) {
 		int i;
 		for (i = 0; i < walkableCells.length; i++) {
-			this.cells[walkableCells[i].getX()-1][walkableCells[i].getY()-1] = walkableCells[i];
+			this.cells[walkableCells[i].getX()][walkableCells[i].getY()] = walkableCells[i];
 		}
 	}
 	
