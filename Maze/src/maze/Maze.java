@@ -53,13 +53,13 @@ public class Maze extends GraphImp {
 		for (i = 0; i < cells.length; i++) {
 			for (j = 0; j < cells.length; j++) {
 				if (departure.getX() == i && departure.getY() == j) {
-					this.cells[i][j] = new Cell(i, j, CellType.D);
+					this.cells[i][j] = departure;
 				}
 				else if (arrival.getX() == i && arrival.getY() == j) {
-					this.cells[i][j] = new Cell(i, j, CellType.A);
+					this.cells[i][j] = arrival;
 				}
 				else {
-					this.cells[i][j] = new Cell(i, j, CellType.W);
+					this.cells[i][j] = new Cell(i, j, CellType.W, false);
 				}
 			}
 		}
